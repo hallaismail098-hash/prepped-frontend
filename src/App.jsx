@@ -67,7 +67,7 @@ const FlowPage = ({ children }) => (
     </div>
 );
 
-// Top bar: Evanora logo + back chevron
+// Top bar: Prepped logo + back chevron
 const FlowHeader = ({ onBack }) => (
     <div className="mb-8 flex items-center gap-3">
         <button
@@ -77,7 +77,7 @@ const FlowHeader = ({ onBack }) => (
         >
             <ChevronLeft size={16} />
         </button>
-        <span className="font-serif text-2xl italic text-foreground">Evanora.</span>
+        <span className="font-serif text-2xl italic text-foreground">Prepped.</span>
     </div>
 );
 
@@ -157,7 +157,7 @@ const liquidFragmentShader = `
     }
 `;
 
-const LiquidEvanoraPlane = () => {
+const LiquidPreppedPlane = () => {
     const meshRef = useRef(null);
     const { size, gl } = useThree();
     const targetMouse = useRef(new THREE.Vector2(0.5, 0.5));
@@ -207,7 +207,7 @@ const LiquidEvanoraPlane = () => {
 
 const LiquidHeroBackground = () => (
     <Canvas dpr={[1, 2]} gl={{ antialias: true, alpha: false }} className="pointer-events-none absolute inset-0 h-full w-full">
-        <LiquidEvanoraPlane />
+        <LiquidPreppedPlane />
     </Canvas>
 );
 
@@ -562,7 +562,7 @@ const PresentationSetupPage = ({ navigate }) => (
         <FlowHeader onBack={() => navigate("selectmode")} />
 
         <h1 className="font-serif text-4xl leading-none text-foreground">Start your presentation.</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Evanora records and analyses your delivery in real time.</p>
+        <p className="mt-2 text-sm text-muted-foreground">Prepped records and analyses your delivery in real time.</p>
 
         <div className="mt-7 rounded-2xl border border-border bg-background/40 p-5">
             <p className="mb-4 text-sm font-medium text-foreground">Before you start</p>
@@ -571,7 +571,7 @@ const PresentationSetupPage = ({ navigate }) => (
                     "Find a quiet space with minimal background noise",
                     "Speak at your natural pace — avoid rushing",
                     "Structure your talk: intro, key points, conclusion",
-                    "Evanora tracks pace, clarity, and confidence live",
+                    "Prepped tracks pace, clarity, and confidence live",
                 ].map((tip) => (
                     <li key={tip} className="flex items-start gap-3">
                         <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-brand-red" />
@@ -786,7 +786,7 @@ const SessionPage = ({ navigate, mode, difficulty }) => {
                         {fmt(seconds)}
                     </p>
                     <h2 className="mt-3 font-serif text-3xl leading-none text-foreground">Session in progress.</h2>
-                    <p className="mt-2 text-sm text-muted-foreground">Speak clearly — Evanora is listening.</p>
+                    <p className="mt-2 text-sm text-muted-foreground">Speak clearly — Prepped is listening.</p>
                 </div>
 
                 {mode === "interview" ? (
@@ -938,7 +938,7 @@ const Navbar = ({ onSignIn, onGoToHistory }) => {
         <nav className="fixed left-0 right-0 top-4 z-50 flex w-full justify-center px-4">
             <div className="navbar-critical">
                 <a href="#home" className="shrink-0 font-serif text-2xl italic text-foreground transition-opacity hover:opacity-80">
-                    Evanora.
+                    Prepped.
                 </a>
 
                 <div className="hidden items-center gap-1 md:flex">
@@ -1059,7 +1059,7 @@ const Hero = ({ onSignIn }) => {
 
                     <div className="mt-8 md:mt-12">
                         <p className="font-sans text-xl tracking-tight text-white/90 md:text-2xl">
-                            <SplitText delay={1.5} blur={12} scale={0} className="font-normal">Evanora turns practice into confidence.</SplitText>
+                            <SplitText delay={1.5} blur={12} scale={0} className="font-normal">Prepped turns practice into confidence.</SplitText>
                             <SplitText delay={3.5} blur={12} scale={0} className="font-normal"> Speak, analyze, improve, repeat.</SplitText>
                         </p>
                     </div>
@@ -1167,7 +1167,7 @@ const ThreePillars = () => {
         <section ref={sectionRef} className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-background py-10 perspective-[2000px]">
             <div className="z-20 mb-8 flex h-[20vh] items-end justify-center px-4">
                 <div ref={titleRef} className="w-full text-center">
-                    <h2 className="font-serif text-5xl font-light leading-none tracking-tight text-foreground md:text-7xl">Evanora's Practice Core</h2>
+                    <h2 className="font-serif text-5xl font-light leading-none tracking-tight text-foreground md:text-7xl">Prepped's Practice Core</h2>
                     <p className="mt-4 font-sans text-sm uppercase tracking-wide text-muted-foreground md:text-base">Interview confidence, presentation clarity, and real feedback</p>
                 </div>
             </div>
@@ -1178,7 +1178,7 @@ const ThreePillars = () => {
                         <div className="absolute inset-0 hidden overflow-hidden bg-muted md:block" style={{ backfaceVisibility: "hidden", borderRadius: "inherit" }}>
                             <img
                                 src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2400&auto=format&fit=crop"
-                                alt="Evanora practice"
+                                alt="Prepped practice"
                                 className="pointer-events-none absolute top-0 h-full object-cover"
                                 style={{ width: "300%", left: index === 0 ? "0%" : index === 1 ? "-100%" : "-200%", maxWidth: "none" }}
                             />
@@ -1300,9 +1300,9 @@ const BentoGrid = ({ onSignIn }) => {
         <section className="bg-background px-6 py-32 md:px-12" id="dashboard">
             <div className="mx-auto max-w-6xl">
                 <div className="mb-20">
-                    <span className="mb-4 inline-flex text-[11px] font-semibold uppercase tracking-[0.25em] text-brand-red">Evanora Flow</span>
+                    <span className="mb-4 inline-flex text-[11px] font-semibold uppercase tracking-[0.25em] text-brand-red">Prepped Flow</span>
                     <h2 className="mb-6 font-serif text-5xl leading-none tracking-tight text-foreground md:text-6xl">A smoother way to practice speaking.</h2>
-                    <p className="max-w-2xl text-lg font-light text-muted-foreground md:text-xl">Sign in and start your first session — Evanora guides you through every step.</p>
+                    <p className="max-w-2xl text-lg font-light text-muted-foreground md:text-xl">Sign in and start your first session — Prepped guides you through every step.</p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-6">
@@ -1335,9 +1335,9 @@ const BentoGrid = ({ onSignIn }) => {
                                 <div className="my-8 h-24 w-full">
                                     <svg className="h-full w-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 100 20">
                                         <path ref={graphPathRef} d="M0,10 L100,10" fill="none" stroke="var(--brand-red)" strokeWidth="2" vectorEffect="non-scaling-stroke" />
-                                        <path ref={fillPathRef} d="M0,10 L100,10 V20 H0 Z" fill="url(#evanora-chart-fill)" stroke="none" opacity="0.25" />
+                                        <path ref={fillPathRef} d="M0,10 L100,10 V20 H0 Z" fill="url(#prepped-chart-fill)" stroke="none" opacity="0.25" />
                                         <defs>
-                                            <linearGradient id="evanora-chart-fill" x1="0" y1="0" x2="0" y2="1">
+                                            <linearGradient id="prepped-chart-fill" x1="0" y1="0" x2="0" y2="1">
                                                 <stop offset="0%" stopColor="var(--brand-red)" stopOpacity="0.6" />
                                                 <stop offset="100%" stopColor="var(--brand-red)" stopOpacity="0" />
                                             </linearGradient>
@@ -1403,8 +1403,8 @@ const BentoGrid = ({ onSignIn }) => {
                                 </div>
                             </div>
                             <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-red">Recording</span>
-                            <h3 className="mt-3 font-serif text-5xl leading-none tracking-tight text-foreground">Speak. Evanora listens.</h3>
-                            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">Record an answer or presentation — Evanora analyses confidence, clarity, pace, and content.</p>
+                            <h3 className="mt-3 font-serif text-5xl leading-none tracking-tight text-foreground">Speak. Prepped listens.</h3>
+                            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">Record an answer or presentation — Prepped analyses confidence, clarity, pace, and content.</p>
                         </div>
                     </div>
 
@@ -1511,7 +1511,7 @@ const BentoGrid = ({ onSignIn }) => {
 const Testimonials = () => {
     const containerRef = useRef(null);
     const testimonials = [
-        { name: "Sara Khaled", role: "Computer Science Student", text: "Evanora made interview practice feel realistic. The feedback helped me notice mistakes I never paid attention to before." },
+        { name: "Sara Khaled", role: "Computer Science Student", text: "Prepped made interview practice feel realistic. The feedback helped me notice mistakes I never paid attention to before." },
         { name: "Omar Naser", role: "Fresh Graduate", text: "The report was simple and useful. I knew exactly what to improve before my next presentation." },
         { name: "Lina Haddad", role: "Business Student", text: "I liked switching between interview mode and presentation mode. It felt like a complete speaking coach." },
         { name: "Yazan Saleh", role: "Job Seeker", text: "The confidence score and history section helped me see real progress after every practice session." },
@@ -1580,7 +1580,7 @@ const Services = () => {
     return (
         <section className="bg-background px-6 py-32 md:px-12" id="capabilities">
             <div className="mx-auto max-w-6xl">
-                <h2 className="mb-24 font-serif text-5xl text-foreground opacity-90 md:text-6xl">Evanora Capabilities.</h2>
+                <h2 className="mb-24 font-serif text-5xl text-foreground opacity-90 md:text-6xl">Prepped Capabilities.</h2>
                 <div className="grid grid-cols-1 gap-x-12 gap-y-24 md:grid-cols-2">
                     {services.map((service, index) => (
                         <div key={service.id} className="group cursor-pointer border-t border-white/20 pt-8 transition-colors duration-500 hover:border-brand-red">
@@ -1624,7 +1624,7 @@ const Footer = ({ onSignIn }) => {
         <footer className="relative flex h-auto w-full items-center justify-center bg-background p-4 md:h-screen">
             <div ref={containerRef} className="relative flex h-full min-h-[600px] w-full flex-col justify-between gap-12 overflow-hidden rounded-[2rem] border border-white/10 p-6 md:max-h-[96vh] md:min-h-0 md:gap-0 md:p-12">
                 <div className="absolute inset-0 z-0">
-                    <img ref={imageRef} src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2400&auto=format&fit=crop" alt="Evanora final section" className="-mt-[10%] h-[120%] w-full object-cover object-center" />
+                    <img ref={imageRef} src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2400&auto=format&fit=crop" alt="Prepped final section" className="-mt-[10%] h-[120%] w-full object-cover object-center" />
                     <div className="absolute inset-0 bg-[#653d3b]/40 mix-blend-multiply" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#3a1a18]/90 via-[#653d3b]/20 to-transparent" />
                     <div className="absolute inset-0 bg-black/10" />
@@ -1642,14 +1642,14 @@ const Footer = ({ onSignIn }) => {
                                 onClick={onSignIn}
                                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-medium text-black transition-all duration-300 hover:scale-105 hover:bg-gray-200 active:scale-95"
                             >
-                                Sign in to Evanora
+                                Sign in to Prepped
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <div className="relative z-10 mt-12 flex w-full flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 font-sans text-sm text-white/50 md:flex-row md:gap-0">
-                    <p>© 2026 Evanora | All Rights Reserved.</p>
+                    <p>© 2026 Prepped | All Rights Reserved.</p>
                     <a href="#analysis" className="transition-colors hover:text-white">Feedback</a>
                     <div className="flex gap-8">
                         <button type="button" onClick={onSignIn} className="transition-colors hover:text-white">Sign in</button>
