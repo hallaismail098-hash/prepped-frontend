@@ -15,5 +15,4 @@ scores across answer quality, speaking skills, confidence, and facial expression
 Backend (FastAPI, scoring engine): [prepped-gp](https://github.com/hallaismail098-hash/prepped-gp)
 
 ## Project Context
-Graduation project, developed with [Alisar Al-Mhaisen], supervised by Dr. Maria Yousef.
-Validated at a Kendall τ ≈ 0.61 against 317 expert-rated samples.
+Graduation project, validated at a Kendall τ ≈ 0.61 against 317 expert-rated samples.
